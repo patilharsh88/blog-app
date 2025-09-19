@@ -20,7 +20,6 @@ public class AppUser  {
 	private String email;
 	private String password;
 	
-
 	
 	public int getId() {
 		return id;
