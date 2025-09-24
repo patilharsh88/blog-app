@@ -13,6 +13,8 @@ public interface UserRepository extends JpaRepository<AppUser, Integer> {
 	
 	AppUser save(AppUser u);
 
+	AppUser findByEmail(String email);
+
 	
 	
 }

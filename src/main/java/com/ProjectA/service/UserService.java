@@ -35,6 +35,16 @@ public class UserService {
 	    return ap;
 	}
 
+
+	public boolean authenticateUser(String email, String password) {
+        AppUser user = ur.findByEmail(email);
+        if (user != null) {
+            // WARNING: Plaintext password comparison — use hashed passwords in real apps
+            return user.getPassword().equals(password);
+        }
+        return false;
+    }
+
 	
 //	public void addUser(AppUser u) {
 //		ur.save(u);
